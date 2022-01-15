@@ -3,6 +3,7 @@
   padding: 0;
 }
 body {
+  width: 100%;
   margin: 15px;
   padding: 15px;
   font-family: "Lato", sans-serif;
@@ -12,33 +13,31 @@ body {
  ----------------------------------------*/
 nav {
   display: flex;
-  background-color: lightblue;
-  height: 80px;
   width: 100%;
-  margin-bottom: 10px;
 }
-nav h2 {
-  display: block;
+nav > h2 {
+  width: 40%;
   font-size: 26px;
   line-height: 80px;
-  padding: 0 100px;
   font-weight: bold;
+  margin-left: 28px;
 }
 nav ul {
-  width: 80%;
-  margin-left: 255px;
-  float: left;
+  margin-top: 24px;
+  width: 60%;
+  margin-left: 75px;
+  display: flex;
 }
 nav ul li {
+  margin-left: 15px;
+  margin-right: 15px;
   display: inline-block;
-  line-height: 80px;
 }
 nav ul li a {
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   font-weight: bold;
   text-decoration: none;
-  margin-right: 70px;
 }
 ul .fas {
   font-size: 22px;
@@ -91,11 +90,7 @@ header i {
 }
 .header-image img {
   width: 100%;
-  transition: 0.5s;
   margin-bottom: 100px;
-}
-.header-image img:hover {
-  width: 90%;
 }
 
 /*---------------------------------------
@@ -154,13 +149,14 @@ section h2 {
 }
 span {
   margin-top: 55px;
-
+  margin-bottom: 75px;
   float: right;
   margin-right: 25px;
 }
 span a {
   font-size: 20px;
   text-decoration: none;
+  font-weight: bold;
   color: #893fff;
 }
 span i {
@@ -168,6 +164,66 @@ span i {
 }
 /*---------------------------------------
      Popular Collection section End 
+ ----------------------------------------*/
+
+/*---------------------------------------
+    Our App section Start 
+ ----------------------------------------*/
+
+.our-app {
+  display: flex;
+  margin-top: 175px;
+}
+
+.app-image {
+  padding: 55px;
+  margin-left: 85px;
+  width: 50%;
+  border-radius: 25px;
+}
+.app-image img {
+  width: 80%;
+  border-radius: 25px;
+}
+
+.app-info {
+  width: 50%;
+  margin-left: 25px;
+  padding: 10px;
+  margin-top: 170px;
+}
+.app-info h1 {
+  color: #00a9be;
+  font-size: 44px;
+  font-weight: bold;
+}
+.app-info h4 {
+  padding-top: 20px;
+  color: #00a9be;
+  font-size: 20px;
+  font-weight: bold;
+}
+.app-info p {
+  color: gray;
+  padding-top: 20px;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.app-info a {
+  padding: 5px;
+  color: white;
+  border-radius: 41px;
+  font-size: 25px;
+  background-color: #3fb1ff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/*---------------------------------------
+    Our App section End 
  ----------------------------------------*/
 
 /*---------------------------------------
@@ -182,6 +238,9 @@ footer {
   background-color: #0a0826;
   text-align: center;
 }
+footer h1 {
+  color: #3fb1ff;
+}
 .footer-content p {
   margin-top: 10px;
   font-size: 18px;
@@ -190,17 +249,156 @@ footer {
   margin-top: 10px;
   margin-left: 20px;
   font-size: 25px;
+  color: #fff;
 }
 
-.our-app {
-  display: flex;
-  margin-top: 100px;
+/*---------------------------------------
+   Mobile Media query 
+ ----------------------------------------*/
+
+@media only screen and (max-width: 668px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .menu-bar {
+    display: flex;
+  }
+
+  nav h2 {
+    font-size: 18px;
+  }
+  nav ul {
+    display: none;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  header p {
+    margin-left: -25px;
+    text-align: center;
+    font-size: 16px;
+  }
+  header a {
+    font-size: 18px;
+  }
+  header,
+  .our-app {
+    flex-direction: column;
+  }
+  .header-text {
+    margin: 25px;
+    width: 90%;
+  }
+  .header-image {
+    background-position: left center;
+    background-size: 300px 300px;
+  }
+  .header-image img {
+    margin-top: 10px;
+    margin-left: -38px;
+    width: 100%;
+  }
+  .collections {
+    margin-left: 25px;
+    flex-direction: column;
+  }
+  .collection-card {
+    height: 497px;
+    width: 312px;
+    margin: 10px;
+  }
+  .collection-card h4,
+  p {
+    text-align: left;
+  }
+  .collection-card p {
+    text-align: left;
+  }
+
+  .collection-card img {
+    height: 308px;
+    width: 100%;
+  }
+  .app-image {
+    margin-top: -65px;
+    margin-left: 0px;
+    width: 100%;
+    border-radius: 25px;
+  }
+  .app-info {
+    margin-top: 0px;
+    width: 85%;
+  }
+  .app-info h1,
+  h4,
+  p {
+    text-align: center;
+  }
+  .app-info p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+  }
 }
 
-.app-image {
-  width: 50%;
-}
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
-.app-info {
-  margin-top: 200px;
+  .header-text h1 {
+    font-size: 36px;
+  }
+  .header-text p {
+    font-size: 20px;
+    text-align: justify;
+  }
+  .header-image {
+    width: 50%;
+    background-position: left center;
+    background-size: 300px 300px;
+  }
+  .header-image img {
+    margin-top: 100px;
+    width: 80%;
+  }
+  .collection-card {
+    height: 428px;
+    width: 273px;
+  }
+  .collection-card img {
+    width: 100%;
+  }
+  .our-app {
+    display: flex;
+    margin-top: 96px;
+  }
+  .app-image {
+    margin-left: 25px;
+    padding: 0;
+    margin: 30px;
+  }
+  .app-image img {
+    width: 100%;
+    border-radius: 25px;
+  }
+  .app-info {
+    margin-left: 25px;
+    margin-top: 58px;
+  }
+  .app-info h1 {
+    font-size: 30px;
+  }
+  .app-info p {
+    font-size: 16px;
+  }
+  .app-info h4 {
+    font-size: 16px;
+  }
+  .app-info a {
+    font-size: 14px;
+  }
 }
