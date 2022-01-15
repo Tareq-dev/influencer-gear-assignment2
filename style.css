@@ -175,12 +175,6 @@ section h2 {
   margin-top: 75px;
 }
 
-.app-image {
-  padding: 55px;
-  margin-left: 85px;
-  width: 50%;
-  border-radius: 25px;
-}
 .app-image img {
   width: 80%;
   margin-top: 58px;
@@ -293,8 +287,7 @@ input{
 
 footer {
   width: 100%;
-  margin: 0;
-  margin-top: 100px;
+ 
   padding: 30px;
   color: #fff;
   background-color: #0a0826;
@@ -370,7 +363,7 @@ footer h1 {
     width: 100%;
   }
   .collections {
-    flex-direction: column;
+    margin-left: 35px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -397,13 +390,12 @@ footer h1 {
   }
   
   .app-image {
-    margin-left: 0px;
+    margin-left: 45px;
     width: 100%;
-    border-radius: 25px;
   }
   .app-info {
     margin-top: 0px;
-    width: 85%;
+    width: 100%;
   }
   .app-info h1,
   h4,
@@ -511,12 +503,13 @@ footer h1 {
   }
   .header-image {
     width: 50%;
+    margin-top: 65px;
     background-position: left center;
     background-size: 400px 400px;
   }
   .header-image img {
     margin-top: 52px;
-    width: 65%;
+    width: 80%;
   }
   .collection-card {
     height: 440px;
